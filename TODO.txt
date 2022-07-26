@@ -1,6 +1,6 @@
-* eksik yerleri tamamla (hiç kiraci yok sayfası, account page...) 
-* auth ekle if login -> render page ..., form doğrulamayı burada yap
-* sorunları gider, todo ları yap
-* testler yaz (unit, integration, e2e)
+* eksik yerleri tamamla (loading kiraci sayfası, loading anasayfa sayfası ) 
 * pwa ya dönüştür
+* sorunları gider, todo ları yap
+* auth ekle if login -> render page ..., form doğrulamayı burada yap, auth sayfasını da burada yap
+* testler yaz (unit, integration, e2e)
 * performansı optimize et
