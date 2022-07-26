@@ -1,9 +1,7 @@
-import Head from 'next/head'
 import { Entry } from 'contentful'
-import { EntryFields } from '../kiraci/KiraciListe'
+import Head from 'next/head'
 import { KiraciBaslik } from '../kiraci/KiraciBaslik'
-import { KiraciListe } from '../kiraci/KiraciListe'
-import styles from './Home.module.css'
+import { EntryFields, KiraciListe } from '../kiraci/KiraciListe'
 
 type HomeProps = {
   kiracilar: Entry<EntryFields>[]

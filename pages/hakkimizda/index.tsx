@@ -1,6 +1,5 @@
-import React from 'react'
-import { Card } from 'react-bootstrap'
 import Head from 'next/head'
+import { Card } from 'react-bootstrap'
 import styles from './index.module.css'
 
 const Hakkimizda = () => {

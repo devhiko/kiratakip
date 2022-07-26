@@ -1,9 +1,9 @@
+import { Entry } from 'contentful'
 import React, { useState } from 'react'
 import { Button, Col, Container, Form, OverlayTrigger, Row, Tooltip } from "react-bootstrap"
+import { EntryFields } from '../kiraci/KiraciListe'
 import styles from './KiraciBaslik.module.css'
 import { KiraciEkleModal } from './KiraciEkleModal'
-import { Entry } from 'contentful'
-import { EntryFields } from '../kiraci/KiraciListe'
 
 
 type KiraciBaslikProps = {

@@ -1,8 +1,8 @@
-import { Button, Modal } from 'react-bootstrap'
+import { Entry } from 'contentful'
 import { createClient as createClientM } from "contentful-management"
 import { useRouter } from 'next/router'
+import { Button, Modal } from 'react-bootstrap'
 import { EntryFields } from './KiraciListe'
-import { Entry } from 'contentful'
 import styles from './KiraciSilModal.module.css'
 
 // contentful clienti

@@ -1,5 +1,5 @@
-import { Button, Container, Image, Nav, Navbar, OverlayTrigger, Popover, Row, Col } from 'react-bootstrap'
 import Link from 'next/link'
+import { Button, Col, Container, Image, Nav, Navbar, OverlayTrigger, Popover, Row } from 'react-bootstrap'
 import styles from './Navbar.module.css'
 
 export const NavbarComponent = () => {

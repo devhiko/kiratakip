@@ -1,11 +1,11 @@
 import { Entry } from 'contentful'
+import Link from 'next/link'
 import { useState } from 'react'
-import { Card, Popover, OverlayTrigger, Stack, Col } from 'react-bootstrap'
+import { Card, Col, OverlayTrigger, Popover, Stack } from 'react-bootstrap'
 import { KiraciGuncelModal } from "./KiraciGuncelModal"
 import styles from './KiraciKart.module.css'
-import { KiraciSilModal } from './KiraciSilModal'
 import { EntryFields } from './KiraciListe'
-import Link from 'next/link'
+import { KiraciSilModal } from './KiraciSilModal'
 
 type KiraciKartProps = {
   kiraci: Entry<EntryFields>

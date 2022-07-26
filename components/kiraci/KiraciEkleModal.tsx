@@ -1,6 +1,6 @@
 import { createClient as createClientM } from 'contentful-management'
 import { useState } from 'react'
-import { Button, Form, Modal, Spinner } from 'react-bootstrap'
+import { Button, Form, Modal } from 'react-bootstrap'
 import styles from './KiraciEkleModal.module.css'
 
 // form inputları
@@ -103,7 +103,6 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            {/* // ? todo: add regex ? */}
             <Form.Label>Telefon</Form.Label>
             <Form.Control name="tel" value={inputs.tel} onChange={handleChange} type="tel"
               placeholder="50xxxxxxxx"

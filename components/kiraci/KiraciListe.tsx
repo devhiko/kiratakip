@@ -1,7 +1,7 @@
 import { Entry } from "contentful"
+import { Col, Container, Row, Stack } from "react-bootstrap"
 import { KiraciKart } from "./KiraciKart"
 import styles from './KiraciListe.module.css'
-import { Col, Container, Row, Spinner, Stack } from "react-bootstrap"
 
 export type EntryFields = {
   daireNo: number
@@ -28,7 +28,7 @@ export const KiraciListe = ({ kiracilar }: KiraciListeProps) => {
     </Container>
   )
 
-  // todo: kiracilar yükleniyor sayfası ekle
+  // todo: kiracilar yükleniyor sayfası ekle (pwa dan sonra !)
   // ? if kiracilar.loding return Loading...
   // if (kiracilar.loading) return (
   //   <Container className={styles['kiraci-loading']}>

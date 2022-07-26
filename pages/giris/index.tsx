@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React, { useState } from 'react'
-import { Card, Form, Button } from 'react-bootstrap'
+import { Button, Card, Form } from 'react-bootstrap'
 import styles from './index.module.css'
 
 const Giriş = () => {

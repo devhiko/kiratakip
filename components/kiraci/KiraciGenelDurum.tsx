@@ -1,7 +1,7 @@
-import { Card } from 'react-bootstrap'
-import styles from './KiraciGenelDurum.module.css'
 import { Entry } from 'contentful'
+import { Card } from 'react-bootstrap'
 import { EntryFields } from '../kiraci/KiraciListe'
+import styles from './KiraciGenelDurum.module.css'
 
 type KiraciGenelDurumProps = {
   kiracilar: Entry<EntryFields>[]

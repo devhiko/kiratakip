@@ -1,6 +1,6 @@
+import { createClient, Entry, EntryCollection } from 'contentful'
 import Head from 'next/head'
 import { KiraciGenelDurum } from '../../components/kiraci/KiraciGenelDurum'
-import { createClient, Entry, EntryCollection } from 'contentful'
 import { EntryFields } from '../../components/kiraci/KiraciListe'
 
 const client = createClient({

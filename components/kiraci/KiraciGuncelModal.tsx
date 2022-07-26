@@ -26,8 +26,6 @@ type KiraciGuncelModalProps = {
 
 export const KiraciGuncelModal = ({ kiraci, showUpdModal, handleCloseUpd }: KiraciGuncelModalProps) => {
   // state kontrolü
-  const [validated, setValidated] = useState(false)
-
   const [inputs, setInputs] = useState<Inputs>({
     dairedurum: true,
     daireno: 0,

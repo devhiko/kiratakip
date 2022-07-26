@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Card, Form, Button } from 'react-bootstrap'
 import Head from 'next/head'
+import React, { useState } from 'react'
+import { Button, Card, Form } from 'react-bootstrap'
 import styles from './index.module.css'
 
 const Kaydol = () => {

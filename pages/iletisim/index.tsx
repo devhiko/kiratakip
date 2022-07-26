@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import React from 'react'
 import { Card } from 'react-bootstrap'
 import styles from './index.module.css'
 

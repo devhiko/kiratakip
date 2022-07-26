@@ -1,6 +1,6 @@
 import { createClient, Entry, EntryCollection } from "contentful"
 import Head from "next/head"
-import { Button, Card, Stack, Col } from 'react-bootstrap'
+import { Button, Card, Col, Stack } from 'react-bootstrap'
 import { EntryFields } from "../../components/kiraci/KiraciListe"
 import styles from './[slug].module.css'
 
