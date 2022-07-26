@@ -1,0 +1,85 @@
+.card {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  padding: .5rem;
+}
+
+.card:hover {
+  box-shadow: rgb(224, 224, 224) 3px 3px 10px 2px;
+}
+
+.card span {
+  font-size: .8rem;
+  margin: 0 .15rem;
+}
+
+.card-stack {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  color: yellow;
+  font-size: 1.25rem;
+  float: right;
+  cursor: pointer;
+}
+
+.pov-body {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+}
+
+.pov-body a {
+  font-size: .9rem;
+  margin: .25rem auto;
+  text-decoration: none;
+}
+
+.pov-body i {
+  margin-right: .25rem;
+}
+
+.pov-body a:nth-child(2) {
+  font-size: .9rem;
+  margin: .25rem auto;
+  color: var(--bs-warning);
+}
+
+.pov-body a:nth-child(3) {
+  font-size: .9rem;
+  margin: .25rem auto;
+  color: var(--bs-danger);
+}
+
+/* ? MEDIA RULES */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .card span {
+    font-size: 1rem;
+    margin: 0 .6rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .card span {
+    font-size: 1.25rem;
+    margin: 0 1.2rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  ...
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  ...
+} */

@@ -1,0 +1,32 @@
+.pov-body {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+}
+
+.pov-body a {
+  margin: .25rem auto;
+  text-decoration: none;
+}
+
+.nav-row {
+  display: block;
+}
+
+.nav-row .link-img {
+  padding: 0;
+}
+
+.nav-row img {
+  margin: .5rem;
+  padding: 0;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) {
+  .nav-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

@@ -1,0 +1,61 @@
+* Contentful apisinde CRUD için
+
+import {createClient as createClientM} from 'contentful-management'
+
+const clientM = contentful.createClientM({
+  accessToken: '<content_management_api_key>'
+})
+
+//-- Create entry --//
+try {
+  const clientM = createClientM({ accessToken: process.env.C_MNG_TOKEN! })
+  const space = await clientM.getSpace(process.env.C_SPC_ID!)
+  console.log(space)
+  const env = await space.getEnvironment('master')
+  const entry = await env.createEntry('kiracibilgi', {
+    fields: {
+      daireDurum: { 'en-US': true },
+      slug: { 'en-US': 'test-content' },
+      daireNo: { 'en-US': 4 },
+      adSoyad: { 'en-US': 'test content' },
+      telefon: { 'en-US': '5553332211' },
+      tutar: { 'en-US': 1200 },
+      sozlesmeTarihi: { 'en-US': '2022-05-03' }
+    }
+  })
+  entry.publish()
+  console.log(`Entry ${entry.sys.id} published !`)
+} catch (error) {
+  console.error('Error while publishing entry', error)
+}
+
+//-- Read entry --//
+const client = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID!,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!
+})
+const res = await client.getEntries({ 'content_type': '<content-type-id>' })
+
+//-- Update entry --//
+client.getSpace('<space_id>')
+.then((space) => space.getEnvironment('<environment-id>'))
+.then((environment) => environment.getEntry('<entry_id>'))
+.then((entry) => {
+  entry.fields.title['en-US'] = 'New entry title'
+  return entry.update()
+})
+.then((entry) => console.log(`Entry ${entry.sys.id} updated.`))
+.catch(console.error)
+
+//-- Delete entry --//
+try {
+  const space = await clientM.getSpace(process.env.C_SPC_ID!)
+  const env = await space.getEnvironment('master')
+  const entryID: string = kiraci.sys.id
+  const entry = await env.getEntry(entryID)
+  entry.unpublish()
+  entry.delete()
+  console.log(`Entry: ${entryID} deleted !`)
+} catch (error) {
+  console.error(`Error while publishing entry ${kiraci.sys.id} !`, error)
+}

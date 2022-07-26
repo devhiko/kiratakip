@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  margin: 10px auto;
+  width: 50%;
+  text-align: center;
+}
+
+.container span {
+  margin: auto .5rem;
+}
+
+.spinner {
+  width: 100px;
+  aspect-ratio: 1/1;
+  border-width: .5rem;
+}

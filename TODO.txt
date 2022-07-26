@@ -1,0 +1,7 @@
+*X* ERROR: kiraci eklerkenki çelişkiyi gider, doğrulamadan ekleme
+* eksik yerleri tamamla (account page...) 
+* auth ekle if login -> render page ...
+* sorunları gider
+* testler yaz (unit, integration, e2e)
+* pwa ya dönüştür
+* performansı optimize et

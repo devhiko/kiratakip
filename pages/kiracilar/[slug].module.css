@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  margin: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  margin: 1rem;
+}
+
+.aykart {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: .75rem;
+  align-items: center;
+}
+
+.aykart:hover {
+  box-shadow: rgb(224, 224, 224) 3px 3px 10px 2px;
+}
+
+.aykart span {
+  margin-right: 2.25rem;
+}
+
+/* .aykart div {
+  margin-right: 1rem;
+} */
+
+.aykart-header {
+  margin: .5rem 0;
+}
+
+.aykart-header span {
+  margin: 0 1.5rem;
+}
+
+/* ? MEDIA RULES */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+  
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+  ...
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  ...
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  ...
+} */

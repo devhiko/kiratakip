@@ -1,0 +1,50 @@
+.card {
+  margin: 1rem;
+  width: auto;
+  height: auto;
+}
+
+.card-title {
+  margin: 1rem auto;
+}
+
+.form {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.form p {
+  margin: 0;
+  text-align: center;
+}
+
+.form button {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.btn-giris {
+  margin-left: .5rem;
+}
+
+/* ? MEDIA RULES */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+  
+} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+  ...
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  ...
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  ...
+} */

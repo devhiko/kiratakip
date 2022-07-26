@@ -1,0 +1,55 @@
+.row {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.col {
+  width: auto;
+  margin: .5rem .25rem;
+  padding: 0;
+}
+
+.col span {
+  text-align: justify;
+  font-size: .7rem;
+  margin: .6rem;
+}
+
+.center {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ? MEDIA RULES */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .col span {
+    text-align: justify;
+    font-size: 1rem;
+    margin: .4rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .col span {
+    text-align: justify;
+    font-size: 1.25rem;
+    margin: 1.2rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {
+  ...
+} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+  ...
+} */

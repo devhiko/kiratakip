@@ -1,0 +1,18 @@
+.card {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 1rem;
+}
+
+/* .card:hover {
+  background: rgba(238, 237, 237, 0.575);
+} */
+
+.card span {
+  margin: 1rem;
+}
+
+.card button {
+  float: inline-end;
+  margin-right: .5rem;
+}
