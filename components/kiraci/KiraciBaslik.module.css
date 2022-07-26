@@ -23,7 +23,7 @@
 
 .search-results {
   display: none;
-  width: 92%;
+  width: auto;
   padding: .5rem;
   margin: 0 .5rem;
   z-index: 1000;
@@ -58,14 +58,9 @@
 
 /* ? MEDIA RULES */
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
-  
-} */
-
 /* Medium devices (landscape tablets, 768px and up) */
 /* @media only screen and (min-width: 768px) {
-  ...
+ 
 } */
 
 /* Large devices (laptops/desktops, 992px and up) */

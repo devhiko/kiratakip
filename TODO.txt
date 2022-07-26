@@ -1,6 +1,7 @@
-* eksik yerleri tamamla (loading kiraci sayfası, loading anasayfa sayfası ) 
-* pwa ya dönüştür
+* eksik yerleri tamamla -> bak varsa
 * sorunları gider, todo ları yap
+* pwa ya dönüştür
 * auth ekle if login -> render page ..., form doğrulamayı burada yap, auth sayfasını da burada yap
 * testler yaz (unit, integration, e2e)
 * performansı optimize et
+* ui design principles notlarına bak

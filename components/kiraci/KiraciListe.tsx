@@ -17,17 +17,16 @@ type KiraciListeProps = {
 }
 
 export const KiraciListe = ({ kiracilar }: KiraciListeProps) => {
-  console.log(kiracilar.length)
-  // if (!kiracilar.length || kiracilar.length === 0) return (
-  //   <Container className={styles.kiraciyok} >
-  //     <div className={styles.center}>
-  //       <div className={styles['kiraciyok-image']}>
-  //         <img src="/assets/ev.png" width={100} height={100}></img>
-  //       </div>
-  //       <p style={{ textAlign: 'center' }}>Hiç kiracı yok, Eklediğinizde burada görünür</p>
-  //     </div>
-  //   </Container>
-  // )
+  if (!kiracilar.length || kiracilar.length === 0) return (
+    <Container className={styles.kiraciyok} >
+      <div className={styles.center}>
+        <div className={styles['kiraciyok-image']}>
+          <img src="/assets/ev.png" width={100} height={100}></img>
+        </div>
+        <p style={{ textAlign: 'center' }}>Hiç kiracı yok, Eklediğinizde burada görünür</p>
+      </div>
+    </Container>
+  )
 
   // todo: kiracilar yükleniyor sayfası ekle
   // ? if kiracilar.loding return Loading...
@@ -60,8 +59,8 @@ export const KiraciListe = ({ kiracilar }: KiraciListeProps) => {
         <Stack>
           {kiraKart()}
         </Stack>
-      </Row>
 
+      </Row>
     </Container>
   )
 }
