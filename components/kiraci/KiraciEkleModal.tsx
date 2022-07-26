@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { Button, Form, Modal, Spinner } from 'react-bootstrap'
 import styles from './KiraciEkleModal.module.css'
 
-
 // form inputları
 type Inputs = {
   daireno: number
@@ -20,9 +19,7 @@ type KiraciEkleModalProps = {
 }
 
 export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => {
-  // state kontrolü
-  const [validated, setValidated] = useState(false)
-
+  // veri state kontrolü
   const [inputs, setInputs] = useState<Inputs>({
     daireno: 0,
     adsoyad: '',
@@ -30,7 +27,6 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
     tutar: 0,
     soztarih: new Date().toDateString(),
   })
-
 
   // * slug maker (life savior) Split using a space character
   const makeSlug = () => {
@@ -46,17 +42,8 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
   }
 
   const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
-    // bilgiler  yanlışsa
-    const form = evt.currentTarget
-    if (form.checkValidity() === false) {
-      evt.preventDefault()
-      evt.stopPropagation()
-      // alert('Bazı bilgiler yanlış')
-    }
-    setValidated(true)
-    // ! buradaki çelişkiyi çöz
+    evt.preventDefault()
     const kiraciEkle = async () => {
-      // todo: if !inputs {...}
       try {
         const clientM = createClientM({ accessToken: process.env.C_MNG_TOKEN! })
         const space = await clientM.getSpace(process.env.C_SPC_ID!)
@@ -73,15 +60,15 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
           }
         })
         entry.publish()
-        console.log(`Entry ${entry.sys.id} published !`)
+        // console.log(`Entry ${entry.sys.id} published !`)
       } catch (error) {
         console.error('Error while publishing entry', error)
       }
     }
     kiraciEkle()
-    alert('Kiracı Eklendi !')
     // doğrulama için
-    console.log('Entry: ', inputs)
+    // console.log('Entry: ', inputs)
+    alert('Kiracı Eklendi !')
     handleClose()
     // form temizleme
     setInputs({
@@ -93,13 +80,11 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
     })
   }
 
-
   return (
     <Modal className={styles.modal} show={show} onHide={handleClose}>
       <Modal.Header closeButton><Modal.Title>Kiracı Ekleyin</Modal.Title></Modal.Header>
       <Modal.Body>
-
-        <Form validated={validated} onSubmit={handleSubmit} noValidate>
+        <Form onSubmit={handleSubmit}>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Daire No</Form.Label>
@@ -108,8 +93,6 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
               min={1}
               max={25}
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Lütfen geçerli bir daire numarası girin</Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -117,8 +100,6 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
             <Form.Control name="adsoyad" value={inputs.adsoyad} onChange={handleChange} type="text"
               placeholder="Ahmet Yeşil"
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Girdiğiniz bilgileri kontrol edin</Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -128,8 +109,6 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
               placeholder="50xxxxxxxx"
               pattern='\(?(\d{3})\)?[-\.\s]?(\d{3})[-\.\s]?(\d{4})'
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Telefon numarasını kontrol edin</Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -139,8 +118,6 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
               min={1000}
               max={10000}
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Lütfen uygun bir tutar girin, 1000 ile 10000 arası</Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -148,8 +125,6 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
             <Form.Control name="soztarih" value={inputs.soztarih} onChange={handleChange} type="date"
               placeholder="Ahmet Yeşil"
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Lütfen tarihi kontrol edin</Form.Control.Feedback>
           </Form.Group>
 
           <Button className={styles.btnEkle} variant="primary" type="submit">
@@ -159,7 +134,6 @@ export const KiraciEkleModal = ({ show, handleClose }: KiraciEkleModalProps) => 
             Ekle
           </Button>
         </Form>
-
       </Modal.Body>
     </Modal >
   )

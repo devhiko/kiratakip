@@ -31,7 +31,10 @@ const Giriş = () => {
                 <i className="bi bi-envelope" style={{ marginRight: '.5rem' }}></i>
                 E-posta
               </Form.Label>
-              <Form.Control type="email" placeholder="abc@maildomain.com" pattern='(\w\.?)+@[\w\.-]+\.\w{2,4}' required />
+              <Form.Control type="email" placeholder="abc@maildomain.com"
+                pattern='(\w\.?)+@[\w\.-]+\.\w{2,4}'
+                required
+              />
               <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
               <Form.Control.Feedback type="invalid">E-posta adresinizi kontrol edin</Form.Control.Feedback>
             </Form.Group>
@@ -42,7 +45,9 @@ const Giriş = () => {
               </Form.Label>
               <Form.Control type="password" placeholder="abc1234" minLength={8} required />
               <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-              <Form.Control.Feedback type="invalid">Şifrenizi kontrol edin, en az 8 karakter olmalı</Form.Control.Feedback>
+              <Form.Control.Feedback
+                type="invalid"
+              >Şifrenizi kontrol edin, en az 8 karakter olmalı</Form.Control.Feedback>
             </Form.Group>
             <Card.Link href="/sifresifirlama">Şifrenizi mi unuttunuz?</Card.Link>
             <Button variant="primary" type="submit">Giriş</Button>

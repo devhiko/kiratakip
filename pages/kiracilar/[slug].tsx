@@ -21,9 +21,18 @@ type KiraciDetayProps = {
 export const getStaticPaths = async () => {
   const res: EntryCollection<EntryFields> = await client.getEntries({ content_type: "kiracibilgi" })
 
-  const paths = res.items.map((item) => { return { params: { slug: item.fields.slug } } })
+  const paths = res.items.map((item) => {
+    return {
+      params: {
+        slug: item.fields.slug
+      }
+    }
+  })
 
-  return { paths, fallback: true }
+  return {
+    paths,
+    fallback: true
+  }
 }
 
 export const getStaticProps = async ({ params }: ParamType) => {
@@ -32,40 +41,70 @@ export const getStaticProps = async ({ params }: ParamType) => {
     'fields.slug': params.slug
   })
 
-  if (!items.length) return { redirect: { destination: '/', permanent: false } }
+  if (!items.length)
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    }
 
-  return { props: { kiraci: items[0] }, revalidate: 1 }
+  return {
+    props: {
+      kiraci: items[0]
+    },
+    revalidate: 1
+  }
 }
 
 export default function KiraciDetay({ kiraci }: KiraciDetayProps) {
   let { adSoyad, tutar } = kiraci.fields
 
   const AyKart = () => {
-    const aylar = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım',
-      'Aralık']
+    const aylar = [
+      'Ocak',
+      'Şubat',
+      'Mart',
+      'Nisan',
+      'Mayıs',
+      'Haziran',
+      'Temmuz',
+      'Ağustos',
+      'Eylül',
+      'Ekim',
+      'Kasım',
+      'Aralık'
+    ]
 
     const ayKarti = () => aylar.map((ay: string) => (
       <Stack className={styles.container} key={ay}>
         <Stack className={styles['aykart-header']} direction="horizontal">
+
           <Col xs={7}>
             <span>Ay</span>
             <span>Tutar</span>
           </Col>
+
           <Col xs={5}>
             <span>Ödeme Durumu</span>
           </Col>
+
         </Stack>
+
         <Card className={styles.aykart}>
+
           <Col xs={9}>
             <span>{ay}</span>
             <span>{tutar}</span>
           </Col>
+
           <Col xs={3}>
             <div style={{ fontSize: '1.25rem', cursor: 'pointer' }} className="form-check form-switch">
               <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
               <label className="form-check-label"></label>
             </div>
           </Col>
+
         </Card>
       </Stack>
     ))

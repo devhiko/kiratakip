@@ -25,11 +25,19 @@ const SifreSifirla = () => {
       <Card className={styles.card}>
         <Card.Title className={styles['card-title']}>Şifrenizi Sıfırlayın</Card.Title>
         <Card.Body>
-          <Card.Text className={styles['card-text']}>E-posta adresinize bir şifre sıfırlama maili göndereceğiz</Card.Text>
+          <Card.Text
+            className={styles['card-text']}
+          >
+            E-posta adresinize bir şifre sıfırlama maili göndereceğiz
+          </Card.Text>
           <Form className={styles.form} validated={validated} onSubmit={handleSubmit} noValidate>
             <Form.Group className={styles['form-group']} controlId="formBasicEmail">
               <Form.Label >E-posta</Form.Label>
-              <Form.Control className={styles['form-control']} type="email" pattern='(\w\.?)+@[\w\.-]+\.\w{2,4}' placeholder="abc@def.com" required />
+              <Form.Control className={styles['form-control']} type="email"
+                pattern='(\w\.?)+@[\w\.-]+\.\w{2,4}'
+                placeholder="abc@def.com"
+                required
+              />
               <Form.Control.Feedback>İyi Görünüyor</Form.Control.Feedback>
               <Form.Control.Feedback type='invalid'>E postanızı kontrol edin</Form.Control.Feedback>
             </Form.Group>

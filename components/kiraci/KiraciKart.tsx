@@ -46,6 +46,7 @@ export const KiraciKart = ({ kiraci }: KiraciKartProps) => {
     <Card className={styles.card}>
       <Card.Body className={styles['card-body']}>
         <Stack className={styles['card-stack']} direction='horizontal'>
+
           <Col xs={11}>
             <span>{daireNo}</span>
             <span>{adSoyad}</span>
@@ -53,18 +54,19 @@ export const KiraciKart = ({ kiraci }: KiraciKartProps) => {
             <span>{tutar}</span>
             <span>{sozlesmeTarihi}</span>
           </Col>
-          {/*  // ? ikon kullan */}
-          {/* menu icon */}
+
           <Col xs={1}>
             <OverlayTrigger trigger="click" delay={{ show: 5000, hide: 400 }} placement="left" overlay={popover}>
+              {/* menu icon */}
               <i className="bi bi-three-dots-vertical"
                 style={{ fontSize: '1.25rem', marginLeft: '.5rem', cursor: 'pointer' }}
               ></i>
             </OverlayTrigger>
           </Col>
+
           {/* güncelleme modalı */}
-          {/* silme modalı */}
           <KiraciGuncelModal kiraci={kiraci} showUpdModal={showUpdModal} handleCloseUpd={handleCloseUpd} />
+          {/* silme modalı */}
           <KiraciSilModal kiraci={kiraci} showDelModal={showDelModal} handleCloseDel={handleCloseDel} />
         </Stack>
       </Card.Body>

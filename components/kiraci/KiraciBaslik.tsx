@@ -11,11 +11,11 @@ type KiraciBaslikProps = {
 }
 
 export const KiraciBaslik = ({ kiracilar }: KiraciBaslikProps) => {
-  // ! burada hata var search işlevinde
   // modal state i
   const [show, setShow] = useState(false)
   const handleShow = () => setShow(true)
   const handleClose = () => setShow(false)
+
   // search state i
   const [query, SetQuery] = useState('')
 
@@ -43,17 +43,22 @@ export const KiraciBaslik = ({ kiracilar }: KiraciBaslikProps) => {
   return (
     <Container fluid>
       <Row className={styles.row}>
+
         <Col xs={12} xl={5}>
           <h5>Daire Durumu</h5>
         </Col>
+
         <Col xs={12} xl={7} className={styles['search-col']}>
+
           <Form className={styles.form}>
-            <Form.Control onChange={handleChange} value={query} className={styles.search} type="search" placeholder="Kiraci arayın" aria-label="Search" />{<i className="bi bi-search searchIcon" style={{ margin: '1rem .25rem', fontSize: '1.25rem' }}></i>}
-            <Form.Control.Feedback>İyi Görünüyür</Form.Control.Feedback>
-            <Form.Control.Feedback type='invalid'>Lütfen bir kelime girin</Form.Control.Feedback>
+            <Form.Control onChange={handleChange} value={query} className={styles.search} type="search" placeholder="Kiraci arayın" aria-label="Search" />
+            {<i className="bi bi-search searchIcon"
+              style={{ margin: '1rem .25rem', fontSize: '1.25rem' }}>
+            </i>}
           </Form>
           <SearchResultsCard />
         </Col>
+
       </Row>
 
       <OverlayTrigger placement="auto" delay={{ show: 250, hide: 400 }}

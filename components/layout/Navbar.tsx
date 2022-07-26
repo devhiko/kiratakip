@@ -19,7 +19,9 @@ export const NavbarComponent = () => {
   return (
     <Navbar bg="light" expand="sm">
       <Container>
-        <Navbar.Brand href="/"><Image src='/assets/logo.png' width={30} height={30} />KiraTakip</Navbar.Brand>
+        <Navbar.Brand href="/"><Image src='/assets/logo.png' width={30} height={30} />
+          KiraTakip
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
 
@@ -30,7 +32,7 @@ export const NavbarComponent = () => {
           </Nav>
 
           <Row className={styles['nav-row']}>
-            {/* // ! style responsive */}
+
             <Col xs={2}><Button href='/giris'>Giriş</Button></Col>
 
             <Col xs={2}>

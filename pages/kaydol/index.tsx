@@ -30,16 +30,27 @@ const Kaydol = () => {
               <Form.Label>Ad Soyad</Form.Label>
               <Form.Control type="text" placeholder="John Doe" required />
               <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-              <Form.Control.Feedback type="invalid">Lütfen sadece isim ve soyad girin</Form.Control.Feedback>
+              <Form.Control.Feedback
+                type="invalid"
+              >
+                Lütfen sadece isim ve soyad girin
+              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>
                 <i className="bi bi-envelope" style={{ marginRight: '.5rem' }}></i>
                 E-posta
               </Form.Label>
-              <Form.Control type="email" placeholder="abc@def.com" pattern='(\w\.?)+@[\w\.-]+\.\w{2,4}' required />
+              <Form.Control type="email" placeholder="abc@def.com"
+                pattern='(\w\.?)+@[\w\.-]+\.\w{2,4}'
+                required
+              />
               <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-              <Form.Control.Feedback type="invalid">E-posta adresinizi kontrol edin</Form.Control.Feedback>
+              <Form.Control.Feedback
+                type="invalid"
+              >
+                E-posta adresinizi kontrol edin
+              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>
@@ -48,7 +59,11 @@ const Kaydol = () => {
               </Form.Label>
               <Form.Control type="password" placeholder="abc123" minLength={8} required />
               <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-              <Form.Control.Feedback type="invalid">Şifrenizi kontrol edin, en az 8 karakter</Form.Control.Feedback>
+              <Form.Control.Feedback
+                type="invalid"
+              >
+                Şifrenizi kontrol edin, en az 8 karakter
+              </Form.Control.Feedback>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>
@@ -57,13 +72,21 @@ const Kaydol = () => {
               </Form.Label>
               <Form.Control type="password" placeholder="abc123" minLength={8} required />
               <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-              <Form.Control.Feedback type="invalid">Şifrenizi kontrol edin, şifreler aynı olmalı</Form.Control.Feedback>
+              <Form.Control.Feedback
+                type="invalid"
+              >
+                Şifrenizi kontrol edin, şifreler aynı olmalı
+              </Form.Control.Feedback>
             </Form.Group>
             <Card.Link href="/sifresifirlama">Şifrenizi mi unuttunuz?</Card.Link>
             <Button variant="primary" type="submit">Kaydol</Button>
             <p>veya</p>
             <span>Zaten hesabınız var mı?</span>
-            <Button className={styles['btn-giris']} href="/giris" variant="primary" type="submit">Giriş</Button>
+            <Button className={styles['btn-giris']} href="/giris" variant="primary"
+              type="submit"
+            >
+              Giriş
+            </Button>
           </Form>
         </Card.Body>
       </Card>

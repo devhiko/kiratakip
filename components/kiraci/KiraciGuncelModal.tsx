@@ -50,15 +50,8 @@ export const KiraciGuncelModal = ({ kiraci, showUpdModal, handleCloseUpd }: Kira
   }
 
   const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
-    const form = evt.currentTarget
-    if (form.checkValidity() === false) {
-      evt.preventDefault()
-      evt.stopPropagation()
-    }
-
-    setValidated(true)
-    // ! çelişkiyi çöz
     evt.preventDefault()
+
     const kiraciGuncelle = async () => {
       const entryID: string = kiraci.sys.id
       clientM.getSpace(process.env.C_SPC_ID!)
@@ -100,15 +93,13 @@ export const KiraciGuncelModal = ({ kiraci, showUpdModal, handleCloseUpd }: Kira
     <Modal className={styles.modal} show={showUpdModal} onHide={handleCloseUpd}>
       <Modal.Header closeButton><Modal.Title>Bilgileri Güncelleyin</Modal.Title></Modal.Header>
       <Modal.Body>
-        <Form validated={validated} onSubmit={handleSubmit} noValidate>
+        <Form onSubmit={handleSubmit}>
 
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Daire No</Form.Label>
             <Form.Control name="daireno" value={inputs.daireno} onChange={handleChange} type="number"
               placeholder="1,2,3.."
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Lütfen geçerli bir daire numarası girin</Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -116,26 +107,22 @@ export const KiraciGuncelModal = ({ kiraci, showUpdModal, handleCloseUpd }: Kira
             <Form.Control name="adsoyad" value={inputs.adsoyad} onChange={handleChange} type="text"
               placeholder="Ahmet Yeşil"
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Girdiğiniz bilgileri kontrol edin</Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             {/* // ? todo: add regex ? */}
             <Form.Label>Telefon</Form.Label>
-            <Form.Control name="tel" value={inputs.tel} onChange={handleChange} type="tel" placeholder="050xxxxxxxx"
+            <Form.Control name="tel" value={inputs.tel} onChange={handleChange} type="tel"
+              placeholder="050xxxxxxxx"
               pattern='\(?(\d{3})\)?[-\.\s]?(\d{3})[-\.\s]?(\d{4})'
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Telefon numarasını kontrol edin</Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Tutar (₺)</Form.Label>
-            <Form.Control name="tutar" value={inputs.tutar} onChange={handleChange} type="number" placeholder="1500"
+            <Form.Control name="tutar" value={inputs.tutar} onChange={handleChange} type="number"
+              placeholder="1500"
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Lütfen uygun bir tutar girin, 1000 ile 10000 arası</Form.Control.Feedback>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -143,8 +130,6 @@ export const KiraciGuncelModal = ({ kiraci, showUpdModal, handleCloseUpd }: Kira
             <Form.Control name="soztarih" value={inputs.soztarih} onChange={handleChange} type="date"
               placeholder="Ahmet Yeşil"
               required />
-            <Form.Control.Feedback>İyi görünüyor</Form.Control.Feedback>
-            <Form.Control.Feedback type="invalid">Lütfen tarihi kontrol edin</Form.Control.Feedback>
           </Form.Group>
 
           <Button className={styles.btnGuncelle} variant="primary" type="submit">Güncelle</Button>
