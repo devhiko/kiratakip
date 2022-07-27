@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import { Button, Col, Container, Image, Nav, Navbar, OverlayTrigger, Popover, Row } from 'react-bootstrap'
+import { Button, Col, Container, Nav, Navbar, OverlayTrigger, Popover, Row } from 'react-bootstrap'
 import styles from './Navbar.module.css'
+import Image from 'next/image'
 
 export const NavbarComponent = () => {
 
@@ -19,7 +20,7 @@ export const NavbarComponent = () => {
   return (
     <Navbar bg="light" expand="sm">
       <Container>
-        <Navbar.Brand href="/"><Image src='/assets/logo.png' width={30} height={30} />
+        <Navbar.Brand href="/"><Image src='/assets/logo.png' alt='logo' width={30} height={30} />
           KiraTakip
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -38,7 +39,7 @@ export const NavbarComponent = () => {
             <Col xs={2}>
               <Nav.Link className={styles['link-img']}>
                 <OverlayTrigger trigger="click" placement="auto" overlay={popover}>
-                  <Image src='/assets/avatar.png' width={40} height={40}></Image>
+                  <Image src='/assets/avatar.png' alt='avatar' width={40} height={40}></Image>
                 </OverlayTrigger>
               </Nav.Link>
             </Col>

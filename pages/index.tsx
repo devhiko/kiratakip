@@ -1,5 +1,4 @@
 import { createClient, Entry, EntryCollection } from 'contentful'
-import Head from 'next/head'
 import { EntryFields } from '../components/kiraci/KiraciListe'
 import { Home } from '../components/layout/Home'
 
@@ -21,12 +20,7 @@ export const getStaticProps = async () => {
 }
 
 const Anasayfa = ({ kiracilar }: AnasayfaProps) => (
-  <>
-    <Head>
-      <link rel="manifest" href="/manifest.json" />
-    </Head>
-    <Home kiracilar={kiracilar} />
-  </>
+  <Home kiracilar={kiracilar} />
 )
 
 export default Anasayfa

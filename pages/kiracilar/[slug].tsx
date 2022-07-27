@@ -58,7 +58,7 @@ export const getStaticProps = async ({ params }: ParamType) => {
 }
 
 export default function KiraciDetay({ kiraci }: KiraciDetayProps) {
-  let { adSoyad, tutar } = kiraci.fields
+  let { adSoyad, tutar } = kiraci?.fields || {}
 
   const AyKart = () => {
     const aylar = [

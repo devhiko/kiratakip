@@ -2,6 +2,7 @@ import { Entry } from "contentful"
 import { Col, Container, Row, Stack } from "react-bootstrap"
 import { KiraciKart } from "./KiraciKart"
 import styles from './KiraciListe.module.css'
+import Image from 'next/image'
 
 export type EntryFields = {
   daireNo: number
@@ -21,7 +22,7 @@ export const KiraciListe = ({ kiracilar }: KiraciListeProps) => {
     <Container className={styles.kiraciyok} >
       <div className={styles.center}>
         <div className={styles['kiraciyok-image']}>
-          <img src="/assets/ev.png" width={100} height={100}></img>
+          <Image alt="ev logosu" src="/assets/ev.png" width={100} height={100}></Image>
         </div>
         <p style={{ textAlign: 'center' }}>Hiç kiracı yok, Eklediğinizde burada görünür</p>
       </div>
