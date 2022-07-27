@@ -15,7 +15,7 @@ export const Home = ({ kiracilar }: HomeProps) => {
         <title>Anasayfa</title>
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <div>
+      <div style={{ height: '1500px' }}>
         <KiraciBaslik kiracilar={kiracilar} />
         <KiraciListe kiracilar={kiracilar} />
       </div>
