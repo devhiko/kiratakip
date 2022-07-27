@@ -34,6 +34,11 @@
   overflow: hidden;
 }
 
+.search-result {
+  padding: .5rem;
+  list-style: none;
+}
+
 .search-results div {
   margin: .5rem auto;
 }

@@ -36,13 +36,13 @@ export const NavbarComponent = () => {
 
             <Col xs={2}><Button href='/giris'>Giriş</Button></Col>
 
-            <Col xs={2}>
+            {/* <Col xs={2}>
               <Nav.Link className={styles['link-img']}>
                 <OverlayTrigger trigger="click" placement="auto" overlay={popover}>
                   <Image src='/assets/avatar.png' alt='avatar' width={40} height={40}></Image>
                 </OverlayTrigger>
               </Nav.Link>
-            </Col>
+            </Col> */}
 
           </Row>
         </Navbar.Collapse>

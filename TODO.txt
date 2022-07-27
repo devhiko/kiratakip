@@ -1,4 +1,3 @@
+* ui design principles notlarına bak
 * testler yaz (unit, integration, e2e)
 * performansı optimize et
-* ui design principles notlarına bak
-* vercel e deploy et
