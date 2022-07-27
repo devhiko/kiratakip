@@ -1,3 +1,3 @@
-* testler yaz (unit, integration, e2e)
+* testler yaz (unit, integration, e2e), her sayfa ve component için testler yaz
 * performansı optimize et
 * en son build edip bitir

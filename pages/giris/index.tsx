@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Button, Card, Form } from 'react-bootstrap'
 import styles from './index.module.css'
 
-const Giriş = () => {
+const Giris = () => {
   // form doğrulama state i
   const [validated, setValidated] = useState(false)
 
@@ -60,4 +60,4 @@ const Giriş = () => {
   )
 }
 
-export default Giriş
+export default Giris
