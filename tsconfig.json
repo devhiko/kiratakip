@@ -26,8 +26,7 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  ,
-  "setupTests.js"  "exclude": [
+  "exclude": [
     "node_modules"
   ]
 }

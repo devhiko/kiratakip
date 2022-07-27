@@ -20,7 +20,7 @@ export const KiraciBaslik = ({ kiracilar }: KiraciBaslikProps) => {
   const [query, SetQuery] = useState('')
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
-    const filtered = evt.target.value
+    const filtered = evt.target.value.toLowerCase()
     SetQuery(filtered)
     // console.log(filtered)
   }
@@ -29,7 +29,7 @@ export const KiraciBaslik = ({ kiracilar }: KiraciBaslikProps) => {
     const res = kiracilar
       .map(kiraci => kiraci.fields.adSoyad)
       .filter(k => k.toLowerCase().includes(query))
-      .map(result => <li className={styles['search-result']} key={result}>{result}</li>)
+      .map(result => query && <li className={styles['search-result']} key={result}>{result}</li>)
     // console.log(res)
 
     return (
