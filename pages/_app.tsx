@@ -13,12 +13,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <meta name='theme-color' content='#3367D6' />
+        <link rel='apple-touch-icon' href='/apple-touch.png' />
+        <link rel='manifest' href='/manifest.json' />
+      </Head>
       <Layout>
-        <Head>
-          <meta name='theme-color' content='#3367D6' />
-          <link rel='apple-touch-icon' href='/apple-touch.png' />
-          <link rel='manifest' href='/manifest.json' />
-        </Head>
         <Component {...pageProps} />
       </Layout>
     </>
