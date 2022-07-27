@@ -28,7 +28,7 @@
     },
     {
       "src": "/screenshot2.jpg",
-      "type": "image/jpg",
+      "type": "image/png",
       "sizes": "540x720"
     }
   ]
