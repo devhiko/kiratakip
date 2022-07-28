@@ -5,17 +5,17 @@ import Image from 'next/image'
 
 export const NavbarComponent = () => {
 
-  const popover = (
-    <Popover id="popover-basic">
-      <Popover.Body className={styles['pov-body']}>
-        <Link href='/account/username'><a>Profil</a></Link>
-        <Link href='/'><a>Seçenekler</a></Link>
-        <Link href='/'><a>Seçenekler</a></Link>
-        <Link href='/'><a>Seçenekler</a></Link>
-        <Link href='/'><a>Seçenekler</a></Link>
-      </Popover.Body>
-    </Popover>
-  )
+  // const popover = (
+  //   <Popover id="popover-basic">
+  //     <Popover.Body className={styles['pov-body']}>
+  //       <Link href='/account/username'><a>Profil</a></Link>
+  //       <Link href='/'><a>Seçenekler</a></Link>
+  //       <Link href='/'><a>Seçenekler</a></Link>
+  //       <Link href='/'><a>Seçenekler</a></Link>
+  //       <Link href='/'><a>Seçenekler</a></Link>
+  //     </Popover.Body>
+  //   </Popover>
+  // )
 
   return (
     <Navbar bg="light" expand="sm">

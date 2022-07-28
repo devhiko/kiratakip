@@ -39,13 +39,15 @@ export const KiraciSilModal = ({ kiraci, showDelModal, handleCloseDel }: KiraciS
   }
 
   return (
-    <Modal className={styles.modal} show={showDelModal} onHide={handleCloseDel}>
-      <Modal.Header closeButton><Modal.Title>Kiracıyı sil</Modal.Title></Modal.Header>
-      <Modal.Body>Silmek istediğinize emin misiniz, bu işlem geri alınamaz !</Modal.Body>
-      <Modal.Footer>
-        <Button onClick={handleCloseDel} variant="info">Vazgeç</Button>
-        <Button onClick={handleDelete} variant="danger">Sil</Button>
-      </Modal.Footer>
-    </Modal>
+    <div data-testid='ks'>
+      <Modal className={styles.modal} show={showDelModal} onHide={handleCloseDel}>
+        <Modal.Header closeButton><Modal.Title>Kiracıyı sil</Modal.Title></Modal.Header>
+        <Modal.Body>Silmek istediğinize emin misiniz, bu işlem geri alınamaz !</Modal.Body>
+        <Modal.Footer>
+          <Button onClick={handleCloseDel} variant="info">Vazgeç</Button>
+          <Button onClick={handleDelete} variant="danger">Sil</Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
   )
 }

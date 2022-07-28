@@ -29,39 +29,28 @@ export const KiraciListe = ({ kiracilar }: KiraciListeProps) => {
     </Container>
   )
 
-  // todo: kiracilar yükleniyor sayfası ekle (pwa dan sonra !)
-  // ? if kiracilar.loding return Loading...
-  // if (kiracilar.loading) return (
-  //   <Container className={styles['kiraci-loading']}>
-  //     <div className={styles.center}>
-  //       <Spinner animation="border" variant="primary" className={styles.spinner}>
-  //         <span className="visually-hidden">Kiracılar Yükleniyor...</span>
-  //       </Spinner>
-  //       <p style={{ margin: '1rem auto' }}>Kiracılar Yükleniyor...</p>
-  //     </div>
-  //   </Container>
-  // )
-
   // kira takip kart component i
   const kiraKart = () => kiracilar.map((kiraci) => <KiraciKart key={kiraci.sys.id} kiraci={kiraci} />)
 
   return (
-    <Container className={styles.container}>
-      <Row className={styles.row}>
+    <div data-testid='kliste'>
+      <Container className={styles.container}>
+        <Row className={styles.row}>
 
-        <Col className={styles.col}>
-          <span>Daire No</span>
-          <span>Ad Soyad</span>
-          <span>Telefon</span>
-          <span>Tutar</span>
-          <span>Sözleşme Tarihi</span>
-        </Col>
+          <Col className={styles.col}>
+            <span>Daire No</span>
+            <span>Ad Soyad</span>
+            <span>Telefon</span>
+            <span>Tutar</span>
+            <span>Sözleşme Tarihi</span>
+          </Col>
 
-        <Stack>
-          {kiraKart()}
-        </Stack>
+          <Stack>
+            {kiraKart()}
+          </Stack>
 
-      </Row>
-    </Container>
+        </Row>
+      </Container>
+    </div>
   )
 }

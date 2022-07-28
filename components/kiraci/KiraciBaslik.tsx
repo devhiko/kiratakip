@@ -33,7 +33,7 @@ export const KiraciBaslik = ({ kiracilar }: KiraciBaslikProps) => {
     // console.log(res)
 
     return (
-      <div className={styles['search-results']}>
+      <div data-testid='kb' className={styles['search-results']}>
         <b>Sonuçlar</b>
         {res.length !== 0 ? res : <p>Böyle biri yok</p>}
       </div>

@@ -43,33 +43,36 @@ export const KiraciKart = ({ kiraci }: KiraciKartProps) => {
   )
 
   return (
-    <Card className={styles.card}>
-      <Card.Body className={styles['card-body']}>
-        <Stack className={styles['card-stack']} direction='horizontal'>
+    <div data-testid='kk'>
 
-          <Col xs={11}>
-            <span>{daireNo}</span>
-            <span>{adSoyad}</span>
-            <span>{telefon}</span>
-            <span>{tutar}</span>
-            <span>{sozlesmeTarihi}</span>
-          </Col>
+      <Card className={styles.card}>
+        <Card.Body className={styles['card-body']}>
+          <Stack className={styles['card-stack']} direction='horizontal'>
 
-          <Col xs={1}>
-            <OverlayTrigger trigger="click" delay={{ show: 5000, hide: 400 }} placement="left" overlay={popover}>
-              {/* menu icon */}
-              <i className="bi bi-three-dots-vertical"
-                style={{ fontSize: '1.25rem', marginLeft: '.5rem', cursor: 'pointer' }}
-              ></i>
-            </OverlayTrigger>
-          </Col>
+            <Col xs={11}>
+              <span>{daireNo}</span>
+              <span>{adSoyad}</span>
+              <span>{telefon}</span>
+              <span>{tutar}</span>
+              <span>{sozlesmeTarihi}</span>
+            </Col>
 
-          {/* güncelleme modalı */}
-          <KiraciGuncelModal kiraci={kiraci} showUpdModal={showUpdModal} handleCloseUpd={handleCloseUpd} />
-          {/* silme modalı */}
-          <KiraciSilModal kiraci={kiraci} showDelModal={showDelModal} handleCloseDel={handleCloseDel} />
-        </Stack>
-      </Card.Body>
-    </Card>
+            <Col xs={1}>
+              <OverlayTrigger trigger="click" delay={{ show: 5000, hide: 400 }} placement="left" overlay={popover}>
+                {/* menu icon */}
+                <i className="bi bi-three-dots-vertical"
+                  style={{ fontSize: '1.25rem', marginLeft: '.5rem', cursor: 'pointer' }}
+                ></i>
+              </OverlayTrigger>
+            </Col>
+
+            {/* güncelleme modalı */}
+            <KiraciGuncelModal kiraci={kiraci} showUpdModal={showUpdModal} handleCloseUpd={handleCloseUpd} />
+            {/* silme modalı */}
+            <KiraciSilModal kiraci={kiraci} showDelModal={showDelModal} handleCloseDel={handleCloseDel} />
+          </Stack>
+        </Card.Body>
+      </Card>
+    </div>
   )
 }

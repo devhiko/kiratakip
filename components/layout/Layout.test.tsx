@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
+/**
+ * @jest-environment jsdom
+ */
+
+import { render } from '@testing-library/react';
+import { Layout } from './Layout';
 
 // demo test
-describe('Demo', () => {
-  it('is it working demo', () => {
-    expect(2 + 5).toBe(7)
+describe('Render', () => {
+  it('renders layout', () => {
+    const lyt = render(<Layout children />)
+    expect(lyt.getByTestId('lyt')).toBeInTheDocument()
   })
 })

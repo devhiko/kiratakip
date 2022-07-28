@@ -8,12 +8,12 @@ type LayoutProps = { children: React.ReactNode }
 export const Layout = ({ children }: LayoutProps) => {
 
   return (
-    <>
+    <div data-testid="lyt">
       <NavbarComponent />
       <main className={styles.main}>
         {children}
       </main>
       <Footer />
-    </>
+    </div>
   )
 }

@@ -1,8 +1,28 @@
-import { render, screen } from '@testing-library/react';
+/**
+ * @jest-environment jsdom
+ */
 
-// demo test
-describe('Demo', () => {
-  it('is it working demo', () => {
-    expect(2 + 5).toBe(7)
+import { render } from '@testing-library/react';
+import { KiraciKart } from './KiraciKart';
+import { KiraciListe } from './KiraciListe';
+
+const Mockkart = () => {
+  return (
+    <div data-testid='kk'>
+      Kiraci Bilgileri
+    </div>
+  )
+}
+
+// render 
+describe('Render Block', () => {
+  it('renders kiracikart', () => {
+    const el = render(<Mockkart />)
+    expect(el.getByTestId('kk')).toBeInTheDocument()
   })
+  // it('renders home', () => {
+  //   // const el = render(<Home kiracilar={kiracilar} />)
+  //   expect(1 + 1).toBe(2)
+  // })
+
 })
