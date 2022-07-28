@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name='theme-color' content='#3367D6' />
+        <meta name="description" content="Kira Takip Uygulaması" />
         <link rel='apple-touch-icon' href='/apple-touch.png' />
         <link rel='manifest' href='/manifest.json' />
       </Head>

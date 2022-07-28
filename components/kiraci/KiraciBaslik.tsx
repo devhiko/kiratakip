@@ -64,12 +64,12 @@ export const KiraciBaslik = ({ kiracilar }: KiraciBaslikProps) => {
       <OverlayTrigger placement="auto" delay={{ show: 250, hide: 400 }}
         overlay={<Tooltip id="tooltip-auto">Kiracı Ekleyin</Tooltip>}
       >
-        <Button className={styles.btn} variant="primary" onClick={handleShow}>
+        {/* // ? burada floating action button var  */}
+        <Button className={styles.btn} variant="primary" onClick={handleShow} aria-label="kiraci ekleme butonu">
           <i className="bi bi-plus"></i>
         </Button>
       </OverlayTrigger>
 
-      {/* // ? burada floating action button var  */}
       {/* Kiracı ekleme modal */}
       <KiraciEkleModal show={show} handleClose={handleClose} />
     </Container>
