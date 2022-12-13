@@ -1,1 +1,3 @@
+* refactor code again 
+* make fully responsive
 * performansı optimize et
